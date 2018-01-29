@@ -1,0 +1,12 @@
+<h3 highlight>Fixtures</h3>
+        <!--<a href="{{'../' + (matchDay +1)}}">Next Week<i class="fa fa-angle-double-right"></i></a>-->
+        <ul class="list-group">
+        <li class="list-group-item" *ngFor='let fixture of fixtures | async | callback: showfixture' >
+          <img src="{{fixture.homeCrest}}" title="{{fixture.homeTeamName}}" alt="{{fixture.homeTeamName}}">
+          <strong><i class="red-color"> {{fixture.date | date}}</i></strong>
+          <a href="{{'../' + fixture.matchDay}}">Match Detail<i class="fa fa-angle-double-right"></i></a>
+          <img src="{{fixture.awayCrest}}" title="{{fixture.awayTeamName}}" alt="{{fixture.awayTeamName}}">
+
+            3358 Evergreen Lane England
+        </li>
+        </ul>
